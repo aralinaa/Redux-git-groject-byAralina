@@ -1,0 +1,18 @@
+.main-bg {
+  background-image: url("https://i.ibb.co/BVntbg2/14.jpg");
+  background-size: cover;
+}
+.div-bg{
+  position: relative;
+}
+.div-bg:before {
+  left: 0;
+  top: 0;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://i.ibb.co/xhdbWg7/19.jpg") no-repeat center/cover;
+  opacity: 0.5;
+  z-index: 0;
+}
