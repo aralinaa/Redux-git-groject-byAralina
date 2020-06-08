@@ -1,6 +1,6 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import { Route, BrowserRouter as Router } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import store from '../redux'
 import Head from './head'
 import RepoList from './repo-list'
@@ -14,14 +14,12 @@ const Home = () => {
     <Provider store={store}>
       <Head />
       <Header />
-      <Router>
-        <div className="home-bg page-wrap">
-          <div className="container mx-auto pt-24 pb-8 ">
-            <Route exact path="/:userName" component={() => <RepoList />} />
-            <Route exact path="/:userName/:repositoryName" component={() => <RepoView />} />
-          </div>
+      <div className="home-bg page-wrap">
+        <div className="container mx-auto pt-24 pb-8 ">
+          <Route exact path="/:userName" component={() => <RepoList />} />
+          <Route exact path="/:userName/:repositoryName" component={() => <RepoView />} />
         </div>
-      </Router>
+      </div>
       <Footer />
     </Provider>
   )
