@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { updateUserName } from '../redux/reducers/repositories'
 import { history } from '../redux'
 import Head from './head'
-import '../assets/scss/main1.scss'
 
 const Main = () => {
   const dispatch = useDispatch()

@@ -1,6 +1,13 @@
+
 /* purgecss start ignore */
 @tailwind  base;
 @tailwind  components;
 /* purgecss end ignore */
 
 @tailwind utilities;
+
+@import "listmain";
+@import "./repo-view";
+@import "./home";
+@import "./footer";
+@import "./header";

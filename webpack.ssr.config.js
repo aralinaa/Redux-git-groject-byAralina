@@ -16,19 +16,19 @@ const APP_VERSION = uuidv4().substr(0, 7)
 
 const config = {
   // optimization: {
-  //   minimize: true,
-  //   minimizer: [
-  //     new TerserJSPlugin({ parallel: true }),
-  //     new OptimizeCSSAssetsPlugin({
-  //       cssProcessor: require('cssnano'),
-  //       cssProcessorPluginOptions: {
-  //         preset: ['default', { discardComments: { removeAll: true } }]
-  //       }
-  //     })
-  //   ]
+  // minimize: true,
+  // minimizer: [
+  // new TerserJSPlugin({ parallel: true }),
+  // new OptimizeCSSAssetsPlugin({
+  // cssProcessor: require('cssnano'),
+  // cssProcessorPluginOptions: {
+  // preset: ['default', { discardComments: { removeAll: true } }]
+  // }
+  // })
+  // ]
   // },
   // node: {
-  //   fs: 'empty'
+  // fs: 'empty'
   // },
   target: 'node',
 
@@ -41,10 +41,10 @@ const config = {
     }
   },
   output: {
-    filename: 'js/[name].bundle.js',
+    filename: 'js/ssr/[name].bundle.js',
     path: resolve(__dirname, 'dist/assets'),
     publicPath: '/',
-    chunkFilename: 'js/root.[name].bundle.js?id=[chunkhash]'
+    chunkFilename: 'js/ssr/root.[name].bundle.js?id=[chunkhash]'
   },
   mode: 'production',
   context: resolve(__dirname, 'client'),
@@ -201,8 +201,8 @@ const config = {
   plugins: [
     new StringReplacePlugin(),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].css',
-      chunkFilename: 'css/[id].css',
+      filename: 'css/ssr/[name].css',
+      chunkFilename: 'css/ssr/[id].css',
       ignoreOrder: false
     }),
     new webpack.DefinePlugin({

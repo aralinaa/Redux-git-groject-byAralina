@@ -7,7 +7,6 @@ import RepoList from './repo-list'
 import RepoView from './repo-view'
 import Header from './header'
 import Footer from './footer'
-import '../assets/scss/home.scss'
 
 const Home = () => {
   return (
